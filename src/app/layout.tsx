@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://phodex.app"
+const SITE_URL = "https://www.phodex.app"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
