@@ -60,17 +60,23 @@ export function TerminalGrid() {
       ctx.textBaseline = 'middle'
 
       if (isMobile) {
-        // mobile: show all characters, always visible, low opacity
-        for (let row = 0; row < rows; row++) {
+        // mobile: top half only, fading out toward middle
+        const h = innerHeight
+        const cutoff = Math.ceil((h * 0.5) / CELL)
+        for (let row = 0; row < Math.min(cutoff, rows); row++) {
           const y = row * CELL + HALF
           const rowOff = row * cols
+          const fade = 1 - (row / cutoff)
+          const alpha = MOBILE_ALPHA * fade
+          if (alpha < 0.005) continue
+          const style = `rgba(${r},${r},${r},${alpha.toFixed(3)})`
           for (let col = 0; col < cols; col++) {
             const i = rowOff + col
             if (now - stamps[i] > CHANGE_MS + offsets[i]) {
               chars[i] = Math.random() * CHARS.length | 0
               stamps[i] = now
             }
-            ctx.fillStyle = `rgba(${r},${r},${r},${MOBILE_ALPHA})`
+            ctx.fillStyle = style
             ctx.fillText(CHARS[chars[i]], col * CELL + HALF, y)
           }
         }

@@ -134,7 +134,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 1.8s linear infinite;
+  animation: shimmer 3s linear infinite;
 }
 
 @layer base {
