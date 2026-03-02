@@ -1,6 +1,11 @@
+// FILE: Hero.tsx
+// Purpose: Render the landing hero with messaging, CTA actions, and product mockup.
+// Layer: Presentational component
+// Depends on: next/image, react-icons
+
 import Image from 'next/image'
 import { HiMiniFire } from 'react-icons/hi2'
-import { LuTerminal } from 'react-icons/lu'
+import { LuArrowRight, LuTerminal } from 'react-icons/lu'
 
 export function Hero() {
   return (
@@ -30,6 +35,7 @@ export function Hero() {
             when you're ready.
           </p>
 
+          {/* Primary and secondary CTA links */}
           <a
             href="https://tally.so/r/b5lYz1"
             target="_blank"
@@ -37,6 +43,14 @@ export function Hero() {
             className="mt-5 md:mt-9 inline-flex items-center gap-1 bg-foreground text-background text-sm font-medium px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
           >
             <LuTerminal size={15} strokeWidth={2.5} /> Start Coding
+          </a>
+          <a
+            href="https://x.com/emanueledpt/status/2028572203642388662?s=20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm text-foreground/70 underline underline-offset-4 hover:text-foreground transition-colors"
+          >
+            See latest update <LuArrowRight size={14} />
           </a>
         </div>
 
