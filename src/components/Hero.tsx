@@ -5,7 +5,7 @@
 
 import { JetBrains_Mono } from 'next/font/google'
 import Image from 'next/image'
-import { FaXTwitter } from 'react-icons/fa6'
+import { FaGithub, FaXTwitter } from 'react-icons/fa6'
 import { HiMiniFire } from 'react-icons/hi2'
 import { LuArrowRight, LuTerminal } from 'react-icons/lu'
 
@@ -15,8 +15,7 @@ export function Hero() {
   return (
     <section className="relative z-20 min-h-[calc(100vh-80px)] flex items-center px-4 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
-
-        {/* Text */}
+        {/* Copy and actions */}
         <div className="flex flex-col items-start text-left flex-1">
           <div className="inline-flex items-center gap-1.5 border border-foreground/15 bg-background rounded-full px-3 py-1 mb-4 md:mb-8">
             <HiMiniFire size={11} className="text-foreground/50" />
@@ -39,15 +38,28 @@ export function Hero() {
             when you're ready.
           </p>
 
-          {/* Primary and secondary CTA links */}
-          <a
-            href="https://tally.so/r/b5lYz1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 md:mt-9 inline-flex items-center gap-1 bg-foreground text-background text-sm font-medium px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
-          >
-            <LuTerminal size={15} strokeWidth={2.5} /> Start Coding
-          </a>
+          {/* Keep conversion-first CTA ordering while exposing the open-source test path. */}
+          <div className="mt-5 md:mt-9 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href="https://tally.so/r/b5lYz1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center gap-1 rounded-full bg-foreground px-7 text-sm font-medium text-background transition-opacity hover:opacity-90"
+            >
+              <LuTerminal size={15} strokeWidth={2.5} /> Start Coding
+            </a>
+            <a
+              href="https://github.com/Emanuele-web04/remodex"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center gap-1.5 rounded-full border border-foreground/15 bg-background/80 px-7 text-sm font-medium text-foreground transition-colors hover:border-foreground/35 hover:bg-foreground/5"
+            >
+              <FaGithub size={15} />
+              Try remote control too
+            </a>
+          </div>
+
+          {/* Social proof link for the most recent public progress update. */}
           <a
             href="https://x.com/emanueledpt/status/2029988488586662321?s=20"
             target="_blank"
