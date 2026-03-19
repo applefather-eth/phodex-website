@@ -88,7 +88,7 @@ export default async function RemodexPage() {
       {/* ── Navbar ── */}
       <header className="relative z-20 px-5 sm:px-6 md:px-16 lg:px-24 py-7 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <LuWifi size={14} strokeWidth={2.1} className="text-foreground/80" />
+          <Image src="/logo.png" alt="Remodex" width={20} height={20} className="rounded-sm" />
           <span className="text-xs font-medium uppercase tracking-[0.28em] text-foreground/80">Remodex</span>
         </div>
         <ThemeToggle />
@@ -97,7 +97,7 @@ export default async function RemodexPage() {
       {/* ── Hero ── */}
       <section className="relative z-20 px-5 sm:px-6 md:px-16 lg:px-24 py-12 md:py-0 md:min-h-[calc(100vh-80px)] flex items-center">
         <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-          <div className="flex flex-col items-start flex-1 max-w-xl">
+          <div className="flex flex-col items-start flex-1 w-full md:max-w-xl">
             <FadeIn>
               <a
                 href={REMODEX_REPO_URL}
@@ -132,18 +132,18 @@ export default async function RemodexPage() {
               </p>
             </FadeIn>
 
-            <FadeIn delay={240}>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <FadeIn delay={240} className="w-full">
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap w-full">
                 <a
                   href="https://testflight.apple.com/join/PKZhBUVM"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-foreground px-7 text-sm font-medium text-background transition-opacity hover:opacity-90 font-sans"
+                  className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-foreground px-7 text-sm font-medium text-background transition-opacity hover:opacity-90 font-sans"
                 >
                   <FaApple size={17} />
                   Download App Now
                 </a>
-                <div className={`${mono.className} inline-flex h-12 items-center gap-3 rounded-full border border-foreground/15 bg-muted px-4 sm:px-5 text-xs sm:text-sm text-foreground/60`}>
+                <div className={`${mono.className} inline-flex h-12 w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-foreground/15 bg-muted px-4 sm:px-5 text-xs sm:text-sm text-foreground/60`}>
                   <span className="truncate">npm i -g remodex@latest</span>
                   <CopyButton text="npm i -g remodex@latest" />
                 </div>
@@ -154,14 +154,12 @@ export default async function RemodexPage() {
           <FadeIn delay={200} className="flex-shrink-0">
             <div
               style={{
-                WebkitMaskImage: 'linear-gradient(to right, black 40%, transparent 90%), linear-gradient(to bottom, black 50%, transparent 92%)',
-                WebkitMaskComposite: 'source-in',
-                maskImage: 'linear-gradient(to right, black 40%, transparent 90%), linear-gradient(to bottom, black 50%, transparent 92%)',
-                maskComposite: 'intersect',
+                WebkitMaskImage: 'radial-gradient(ellipse 75% 75% at center, black 70%, transparent 100%)',
+                maskImage: 'radial-gradient(ellipse 75% 75% at center, black 70%, transparent 100%)',
               }}
             >
               <Image
-                src="/mockupp.png"
+                src="/hero.png"
                 alt="Remodex app mockup"
                 width={520}
                 height={620}
@@ -185,28 +183,29 @@ export default async function RemodexPage() {
             </h2>
           </FadeIn>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[
-              { src: '/mockupp.png', title: 'Live control', description: 'Fast mode, Plan mode, steer active runs, and queue follow-up prompts — all without restarting.' },
-              { src: '/50shots_so.png', title: 'Git from iPhone', description: 'Commit, push, pull, branch, stash, and inspect diffs. The full git workflow from your pocket.' },
-              { src: '/50shots_so.png', title: 'Secure pairing', description: 'QR bootstrap with E2E encryption. Trusted devices auto-reconnect — no re-scan needed.' },
-              { src: '/mockupp.png', title: '@files, $skills, /commands', description: 'Reference files with @, invoke skills with $, run /review, /status, or /subagents to spawn parallel agents.' },
+              { src: '/speed.jpg', title: 'Live control', description: 'Fast mode, Plan mode, steer active runs, and queue follow-up prompts — all without restarting.', contain: true },
+              { src: '/giti.jpg', title: 'Git from iPhone', description: 'Commit, push, pull, branch, stash, and inspect diffs. The full git workflow from your pocket.', contain: true },
+              { src: '/connection.png', title: 'Secure pairing', description: 'QR bootstrap with E2E encryption. Trusted devices auto-reconnect — no re-scan needed.', contain: true },
+              { src: '/files-skills.png', title: '@files, $skills, /commands', description: 'Reference files with @, invoke skills with $, run /review, /status, or /subagents to spawn parallel agents.', contain: true },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 80}>
-                <div className="group rounded-2xl border border-foreground/10 bg-card overflow-hidden h-full">
-                  <div className="relative aspect-[3/2] sm:aspect-[4/3] overflow-hidden">
+                <div className="group rounded-[2rem] border-2 border-foreground/15 bg-card overflow-hidden h-full flex flex-col">
+                  <div className="relative w-full overflow-hidden">
                     <Image
                       src={item.src}
                       alt={item.title}
-                      fill
+                      width={800}
+                      height={500}
                       sizes="(min-width: 640px) 50vw, 100vw"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                      className={`w-full h-auto transition-transform duration-500 group-hover:scale-[1.03] ${item.contain ? '' : 'object-cover object-top'}`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
-                      <h3 className="text-sm sm:text-base font-medium text-foreground mb-1 font-sans">{item.title}</h3>
-                      <p className="text-xs sm:text-sm leading-relaxed text-foreground/45 font-[family-name:var(--font-geist-sans)]">{item.description}</p>
-                    </div>
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-card to-transparent" />
+                  </div>
+                  <div className="px-5 sm:px-7 md:px-8 py-4 sm:py-5">
+                    <h3 className="text-sm sm:text-base font-medium text-foreground mb-1 font-sans">{item.title}</h3>
+                    <p className="text-xs sm:text-sm leading-relaxed text-foreground/45 font-[family-name:var(--font-geist-sans)]">{item.description}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -254,7 +253,7 @@ export default async function RemodexPage() {
             </h2>
           </FadeIn>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5">
             {STEPS.map((s, i) => (
               <FadeIn key={s.num} delay={i * 100}>
                 <div className="rounded-2xl border border-foreground/10 bg-card p-6 sm:p-7 md:p-8 h-full flex flex-col">
