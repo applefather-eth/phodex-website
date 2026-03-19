@@ -189,7 +189,7 @@ export default async function RemodexPage() {
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 80}>
                 <div className="group rounded-[2rem] border-2 border-foreground/15 bg-card overflow-hidden h-full flex flex-col">
-                  <div className="relative w-full overflow-hidden max-h-[180px]">
+                  <div className="relative w-full overflow-hidden max-h-[220px]">
                     <img
                       src={item.src}
                       alt={item.title}
