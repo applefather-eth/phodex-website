@@ -193,7 +193,7 @@ export default async function RemodexPage() {
                     <img
                       src={item.src}
                       alt={item.title}
-                      className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="w-full h-auto object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-card to-transparent" />
                   </div>
