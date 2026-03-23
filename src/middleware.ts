@@ -3,13 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(request: NextRequest) {
   const host = request.headers.get('host') ?? ''
 
-  if (host === 'remodex.phodex.app') {
-    const url = request.nextUrl.clone()
-    if (!url.pathname.startsWith('/remodex')) {
-      url.pathname = `/remodex${url.pathname === '/' ? '' : url.pathname}`
-      return NextResponse.rewrite(url)
-    }
-  }
+  // remodex.phodex.app is now the primary domain — no rewrite needed
+  // Keep middleware in case future domain routing is added
 
   return NextResponse.next()
 }

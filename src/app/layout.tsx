@@ -15,35 +15,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://www.phodex.app"
+const SITE_URL = "https://remodex.phodex.app"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Phodex — The Codex App for iOS",
-    template: "%s | Phodex",
+    default: "Remodex — Remote Control for Codex",
+    template: "%s | Remodex",
   },
-  description: "Control a Codex agent from your iPhone. Connect your GitHub repo, stream changes in real time, and push commits. No Mac required.",
-  keywords: ["codex", "ios", "iphone", "coding", "github", "terminal", "openai", "codex cli", "mobile development", "ai coding"],
-  authors: [{ name: "Phodex" }],
-  creator: "Phodex",
+  description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption. Local-first, self-host friendly.",
+  keywords: ["remodex", "codex", "ios", "iphone", "coding", "github", "terminal", "openai", "codex cli", "mobile development", "ai coding", "remote control"],
+  authors: [{ name: "Emanuele Di Pietro" }],
+  creator: "Remodex",
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Phodex — The Codex App for iOS",
-    description: "Control a Codex agent from your iPhone. Connect your GitHub repo, stream changes in real time, and push commits. No Mac required.",
+    title: "Remodex — Remote Control for Codex",
+    description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption.",
     url: SITE_URL,
-    siteName: "Phodex",
-    images: [{ url: "/phodex-og.png", width: 1200, height: 630, alt: "Phodex — The Codex App for iOS" }],
+    siteName: "Remodex",
+    images: [{ url: "/remodex-og1.png", width: 1200, height: 630, alt: "Remodex — Remote Control for Codex" }],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Phodex — The Codex App for iOS",
-    description: "Control a Codex agent from your iPhone. Connect your GitHub repo, stream changes in real time, and push commits. No Mac required.",
-    images: [{ url: "/phodex-og.png", alt: "Phodex — The Codex App for iOS" }],
+    title: "Remodex — Remote Control for Codex",
+    description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption.",
+    images: [{ url: "/remodex-og1.png", alt: "Remodex — Remote Control for Codex" }],
   },
   robots: {
     index: true,
