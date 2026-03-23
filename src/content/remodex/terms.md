@@ -112,6 +112,7 @@ If you obtained the App through the Apple App Store, the following additional te
 
 - These Terms are between you and the Developer only, and not with Apple.
 - The license granted to you for the App is limited to a non-transferable license to use the App on Apple-branded products that you own or control, subject to the Apple Media Services Usage Rules.
+- Apple also publishes a standard end-user license framework for App Store apps: [Apple Licensed Application End User License Agreement (Standard EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
 - The Developer, not Apple, is responsible for providing maintenance and support for the App.
 - In the event of any failure of the App to conform to an applicable warranty, you may notify Apple, and Apple may refund the purchase price, if any, under its applicable policies. To the maximum extent permitted by law, Apple has no other warranty obligation with respect to the App.
 - The Developer, not Apple, is responsible for addressing claims relating to the App, including product liability claims, claims that the App fails to conform to legal or regulatory requirements, and claims arising under consumer protection, privacy, or similar laws.
