@@ -71,20 +71,22 @@ export function AppPreview() {
             data-screen
             className="flex-shrink-0 snap-start w-[280px] md:w-[calc((100%-16px)/2)] lg:w-[calc((100%-48px)/4)]"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={src}
-              alt={`App preview ${i + 1}`}
-              className="w-full h-auto rounded-3xl border border-foreground/10"
-              loading={i < 4 ? 'eager' : 'lazy'}
-            />
+            <div className="rounded-3xl border border-foreground/10 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={`App preview ${i + 1}`}
+                className="block w-full h-auto"
+                loading={i < 4 ? 'eager' : 'lazy'}
+              />
+            </div>
           </div>
         ))}
       </div>
 
       {/* Fade edges */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 z-10 bg-gradient-to-r from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 z-10 bg-gradient-to-l from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 z-10 bg-gradient-to-r from-background/70 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 z-10 bg-gradient-to-l from-background/70 to-transparent" />
     </div>
   )
 }
