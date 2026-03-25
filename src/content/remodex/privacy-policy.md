@@ -1,8 +1,8 @@
-# Remodex — Privacy Policy
+# Remodex — Data Protection Notice
 
-**Last updated:** March 24, 2026
+**Last updated:** March 25, 2026
 
-This Privacy Policy explains how the Remodex mobile application ("App"), developed by Emanuele Di Pietro ("Developer", "we", "us", or "our"), handles your information. Remodex is designed to let you control a Codex runtime on your Mac from your iPhone. Most conversation and workspace activity is processed on your paired Mac, but the App Store version can also use developer-operated relay and notification infrastructure to connect your devices and deliver notifications.
+This Data Protection Notice explains how the Remodex mobile application ("App"), developed by Emanuele Di Pietro ("Developer", "we", "us", or "our"), handles your information. Remodex is designed to let you control a Codex runtime on your Mac from your iPhone. Most conversation and workspace activity is processed on your paired Mac, but the App Store version can also use developer-operated relay infrastructure to connect your devices.
 
 ---
 
@@ -11,11 +11,11 @@ This Privacy Policy explains how the Remodex mobile application ("App"), develop
 Remodex is a local-first remote companion for Codex on your Mac. In practice, this means:
 
 - Your conversations, repository actions, and workspace interactions are primarily processed on your paired Mac.
-- We do not require you to create a Remodex account.
+- We do not operate user accounts or cloud databases.
 - We do not run analytics, advertising, or cross-app tracking.
 - We do not sell your personal information.
 - After the secure session is established, message contents sent between your iPhone and Mac are end-to-end encrypted.
-- The App Store build may use a developer-operated hosted relay and hosted push infrastructure to help your iPhone reach your paired Mac and receive completion notifications.
+- The App Store build may use a developer-operated hosted relay to help your iPhone reach your paired Mac.
 
 ## 2. Information We Collect
 
@@ -30,7 +30,6 @@ Remodex is a local-first remote companion for Codex on your Mac. In practice, th
 
 - **Pairing and identity keys** — The App generates cryptographic identity material used for secure pairing and trusted reconnect.
 - **Relay and trusted-device metadata** — The App stores relay session data, trusted Mac identifiers, and reconnect metadata needed to restore a secure connection.
-- **Push notification registration data** — If you enable notifications, the App stores your APNs token locally and sends notification registration data through your paired Mac to the configured push service. This can include your APNs token, notification preference state, session metadata, thread identifiers, and notification payload fields needed to deliver a completion alert.
 - **Subscription and purchase state** — We use RevenueCat and Apple to determine whether your Pro entitlement is active. This includes entitlement status and related purchase metadata exposed by those services to the app.
 - **Connection metadata** — If you use a hosted relay, the relay can process network and session metadata needed to route traffic, maintain trusted reconnect, and operate the service.
 
@@ -50,7 +49,6 @@ We use the information above only to operate and secure Remodex, including:
 - pairing your iPhone with your Mac
 - routing encrypted traffic between your iPhone and Mac
 - performing trusted reconnect
-- delivering optional push notifications
 - checking and restoring subscription entitlements
 - transcribing voice input when you explicitly use voice mode
 - maintaining app security, stability, and abuse prevention for the hosted infrastructure
@@ -61,7 +59,7 @@ We do not use your information for advertising, profiling, or resale.
 
 If you are in the European Economic Area, we rely on the following legal bases:
 
-- **Contract performance** — to provide the App's core features, including pairing, relay transport, notifications, voice transcription, and subscription handling
+- **Contract performance** — to provide the App's core features, including pairing, relay transport, voice transcription, and subscription handling
 - **Legitimate interests** — to secure the service, prevent abuse, maintain relay connectivity, and protect users and infrastructure
 - **Consent** — for permissions such as camera, microphone, photo library, and local network access
 
@@ -73,20 +71,20 @@ The App Store build can use developer-operated infrastructure for:
 
 - **Hosted relay transport** — to route traffic between your iPhone and paired Mac when direct connectivity is not used
 - **Trusted reconnect resolution** — to help your already-paired iPhone locate the current live session for your trusted Mac
-- **Hosted push delivery** — to register your APNs token and send completion notifications when notifications are enabled
 
 This infrastructure may process:
 
 - session identifiers and trusted-device metadata
 - connection metadata such as IP address, timestamps, and route-level request data
 - secure control messages needed to establish the encrypted session
-- push registration data and notification payload fields required to deliver alerts
 
 Once the secure session is active, the hosted relay does **not** decrypt your Remodex application payloads.
 
 ### 4.2 OpenAI / ChatGPT
 
 When you use voice mode, your audio recording is sent to OpenAI/ChatGPT for speech-to-text transcription.
+
+This is the only instance where your data is processed by a third-party AI service.
 
 - Privacy policy: [openai.com/privacy](https://openai.com/privacy)
 
@@ -101,7 +99,6 @@ RevenueCat is used for subscription and entitlement management. RevenueCat may p
 Apple provides:
 
 - App Store billing and subscription management
-- APNs push delivery
 - iOS permission and platform services used by the app
 
 - Privacy policy: [apple.com/privacy](https://www.apple.com/privacy/)
@@ -119,9 +116,9 @@ Apple provides:
 
 Your paired Mac runs the local bridge and Codex runtime. Chat handling, git operations, and workspace actions are performed there.
 
-### 5.3 On Hosted Relay / Push Infrastructure
+### 5.3 On Hosted Relay Infrastructure
 
-When the hosted relay or hosted push service is used, the server side may keep limited operational state such as active session state, trusted reconnect metadata, push registration data, and dedupe records needed to deliver notifications and prevent duplicate sends.
+When the hosted relay is used, the server side may keep limited operational state such as active session state and trusted reconnect metadata needed to route traffic and restore a secure connection.
 
 ### 5.4 In Transit
 
@@ -134,8 +131,6 @@ When the hosted relay or hosted push service is used, the server side may keep l
 - **Chat history on iPhone** — stored locally until the app's local storage is removed. Unpairing or forgetting a Mac does **not** automatically erase local chat history.
 - **Voice recordings** — temporary voice files are deleted by the app after transcription completes or fails.
 - **Pairing and trusted-device state** — retained in local app storage and Keychain until removed by app actions or platform behavior.
-- **Hosted push registration state** — when hosted push is enabled, push registration records may be retained for up to 30 days after their latest update.
-- **Push dedupe records** — notification dedupe keys may be retained for up to 24 hours.
 - **Subscription records** — retained by Apple and RevenueCat according to their own policies.
 
 We do not maintain a cloud chat history database for your message contents.
@@ -160,7 +155,7 @@ You can manage or cancel your subscription through Apple account settings or thr
 
 Depending on your jurisdiction, you may have rights to access, correct, delete, restrict, or object to the processing of personal information, and to request portability where applicable.
 
-Because Remodex is primarily local-first, much of your data remains under your direct control on your devices. For requests relating to data handled by our hosted relay/push infrastructure, or for guidance on RevenueCat/OpenAI/Apple data handled by those services, contact us using the details below.
+Because Remodex is primarily local-first, much of your data remains under your direct control on your devices. We do not maintain a centralized database of your personal data. Some data may be processed or retained by Apple, RevenueCat, and OpenAI according to their own operational needs and policies.
 
 ### 8.1 California Notice
 
@@ -172,15 +167,15 @@ The App is not directed to children under 13, or the minimum age required by loc
 
 ## 10. International Transfers
 
-Depending on where you use the App and where service providers or hosted infrastructure are located, data processed by OpenAI, RevenueCat, Apple, or developer-operated hosted services may be handled outside your country of residence.
+Depending on where you use the App and where service providers or hosted infrastructure are located, data processed by OpenAI, RevenueCat, Apple, or the hosted relay may be handled outside your country of residence.
 
 ## 11. Changes to This Policy
 
-We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date above.
+We may update this Data Protection Notice from time to time. When we do, we will update the "Last updated" date above.
 
 ## 12. Contact
 
-If you have questions about this Privacy Policy or want to exercise your privacy rights, you can reach us at:
+If you have questions about this Data Protection Notice or want to exercise your privacy rights, you can reach us at:
 
 - **Email:** emandipietro@gmail.com
 - **GitHub:** [github.com/Emanuele-web04/remodex](https://github.com/Emanuele-web04/remodex)

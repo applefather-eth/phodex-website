@@ -1,6 +1,6 @@
 # Remodex — Terms of Use
 
-**Last updated:** March 24, 2026
+**Last updated:** March 25, 2026
 
 These Terms of Use ("Terms") govern your access to and use of the Remodex mobile application ("App"), developed and published by Emanuele Di Pietro ("Developer", "we", "us", or "our"). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
 
@@ -8,7 +8,7 @@ These Terms of Use ("Terms") govern your access to and use of the Remodex mobile
 
 ## 1. Description of the App
 
-Remodex is an iOS companion app for controlling a Codex runtime on your Mac. The App can connect to your Mac directly or through a developer-operated hosted relay, and it can use hosted push infrastructure to deliver optional completion notifications. Core features include real-time chat, git actions, photo attachments, voice transcription, pairing, trusted reconnect, and notification delivery.
+Remodex is an iOS companion app for controlling a Codex runtime on your Mac. The App can connect to your Mac directly or through a developer-operated hosted relay. Core features include real-time chat, git actions, photo attachments, voice transcription, pairing, trusted reconnect, and subscription-gated functionality.
 
 Most coding, repository, and workspace operations run on your paired Mac, not on our hosted relay.
 
@@ -52,7 +52,6 @@ To provide the App Store experience, Remodex may operate hosted services such as
 
 - a relay that routes traffic between your iPhone and paired Mac
 - a trusted reconnect endpoint
-- a push service that registers your APNs token and sends optional completion notifications
 
 These services are part of the Remodex product offering. They do not run Codex for you and do not replace your paired Mac runtime.
 
@@ -60,7 +59,7 @@ These services are part of the Remodex product offering. They do not run Codex f
 
 The App also relies on third-party services, including:
 
-- **Apple** for App Store billing, subscriptions, APNs, and platform services
+- **Apple** for App Store billing, subscriptions, and platform services
 - **RevenueCat** for subscription/entitlement handling
 - **OpenAI / ChatGPT** for voice transcription when you use voice mode
 
@@ -71,7 +70,7 @@ Your use of those services may also be subject to their own terms and privacy po
 You agree not to:
 
 - use the App for unlawful purposes
-- interfere with or abuse the App, bridge, relay, push service, or connected runtime
+- interfere with or abuse the App, bridge, relay, or connected runtime
 - transmit malware, harmful payloads, or abusive traffic
 - attempt to bypass security, entitlement, or pairing protections
 - use the App to infringe the rights of others
@@ -86,11 +85,11 @@ The Remodex name, branding, and app presentation are owned by the Developer, exc
 
 ## 10. Availability and Changes
 
-We may update, change, suspend, or discontinue features of the App, hosted relay, notification service, pricing, or subscription offerings at any time. We may also update these Terms, and your continued use after an update constitutes acceptance of the revised Terms.
+We may update, change, suspend, or discontinue features of the App, hosted relay, pricing, or subscription offerings at any time. We may also update these Terms, and your continued use after an update constitutes acceptance of the revised Terms.
 
 ## 11. Disclaimer of Warranties
 
-THE APP AND ANY RELATED SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, TO THE MAXIMUM EXTENT PERMITTED BY LAW. WE DO NOT GUARANTEE THAT THE APP, HOSTED RELAY, PUSH DELIVERY, OR YOUR CONNECTED RUNTIME WILL ALWAYS BE AVAILABLE, ERROR-FREE, OR SECURE.
+THE APP AND ANY RELATED SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, TO THE MAXIMUM EXTENT PERMITTED BY LAW. WE DO NOT GUARANTEE THAT THE APP, HOSTED RELAY, OR YOUR CONNECTED RUNTIME WILL ALWAYS BE AVAILABLE, ERROR-FREE, OR SECURE.
 
 ## 12. Limitation of Liability
 
