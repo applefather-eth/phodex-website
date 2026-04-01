@@ -124,8 +124,34 @@ export default async function RemodexPage() {
               </p>
             </FadeIn>
 
-            <FadeIn delay={240} className="w-full">
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap w-full">
+            <FadeIn delay={220}>
+              <a
+                href="https://www.producthunt.com/products/remodex-codex-remote-control?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-remodex-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-block transition-transform hover:scale-105"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1112672&theme=dark&t=1775039015766"
+                  alt="Remodex - Control Codex on your iPhone | Product Hunt"
+                  width={180}
+                  height={39}
+                  className="rounded-full dark:hidden"
+                  style={{ width: 190, height: 'auto' }}
+                />
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1112672&theme=light&t=1775039015766"
+                  alt="Remodex - Control Codex on your iPhone | Product Hunt"
+                  width={190}
+                  height={41}
+                  className="rounded-full hidden dark:block"
+                  style={{ width: 190, height: 'auto' }}
+                />
+              </a>
+            </FadeIn>
+
+            <FadeIn delay={300} className="w-full">
+              <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap w-full">
                 {/* Primary CTA points to the live App Store listing from the hero. */}
                 <a
                   href={REMODEX_APP_STORE_URL}
