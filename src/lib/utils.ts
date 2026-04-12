@@ -1,3 +1,8 @@
+// FILE: utils.ts
+// Purpose: Hold small shared client-safe utilities reused across UI components.
+// Layer: Utility helpers
+// Exports: cn
+
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
