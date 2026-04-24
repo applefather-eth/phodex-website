@@ -3,7 +3,7 @@
 @import "shadcn/tailwind.css";
 
 /* FILE: globals.css
-   Purpose: Define shared theme tokens, global element styles, and the Remodex landing page visual system.
+   Purpose: Define shared theme tokens, global element styles, and the OpenAgent landing page visual system.
    Layer: Global stylesheet
    Depends on: Tailwind v4 theme tokens and class names used across app routes */
 
@@ -156,10 +156,10 @@
   display: none;
 }
 
-/* ─── Remodex visual system (neutral, Tailwind tokens) ────── */
+/* ─── OpenAgent visual system (neutral, Tailwind tokens) ────── */
 
-.remodex-shell::before,
-.remodex-shell::after {
+.openagent-shell::before,
+.openagent-shell::after {
   content: "";
   position: absolute;
   inset: auto;
@@ -170,7 +170,7 @@
   opacity: 0.5;
 }
 
-.remodex-shell::before {
+.openagent-shell::before {
   top: 3rem;
   right: 6%;
   width: 26rem;
@@ -179,7 +179,7 @@
   opacity: 0.06;
 }
 
-.remodex-shell::after {
+.openagent-shell::after {
   top: 26rem;
   left: -8rem;
   width: 22rem;
@@ -188,62 +188,62 @@
   opacity: 0.04;
 }
 
-.remodex-panel {
+.openagent-panel {
   @apply rounded-3xl border border-border bg-card backdrop-blur-xl;
   box-shadow: 0 18px 60px rgb(0 0 0 / 0.15);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.remodex-panel:hover {
+.openagent-panel:hover {
   transform: translateY(-2px);
   @apply border-foreground/20;
   box-shadow: 0 24px 70px rgb(0 0 0 / 0.2);
 }
 
-.remodex-panel-light {
+.openagent-panel-light {
   @apply border-foreground/15 bg-secondary;
 }
 
-.remodex-panel-soft {
+.openagent-panel-soft {
   @apply bg-muted;
 }
 
-.remodex-kicker-chip {
+.openagent-kicker-chip {
   @apply inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-muted-foreground;
 }
 
-.remodex-section-label {
+.openagent-section-label {
   @apply inline-flex text-[11px] uppercase tracking-[0.28em] text-muted-foreground;
 }
 
-.remodex-command-pill {
+.openagent-command-pill {
   @apply rounded-full border border-border bg-muted text-foreground/80;
 }
 
-.remodex-stat-chip {
+.openagent-stat-chip {
   @apply rounded-full border border-border bg-muted/60 px-4 py-3 text-sm text-muted-foreground;
 }
 
-.remodex-feature-card {
+.openagent-feature-card {
   @apply flex min-h-full flex-col p-6;
 }
 
-.remodex-icon-wrap {
+.openagent-icon-wrap {
   @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-muted text-foreground/70;
 }
 
-.remodex-tag {
+.openagent-tag {
   @apply inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground;
 }
 
 @media (min-width: 768px) {
-  .remodex-feature-card {
+  .openagent-feature-card {
     @apply p-7;
   }
 }
 
 @media (max-width: 767px) {
-  .remodex-panel {
+  .openagent-panel {
     border-radius: 1.6rem;
   }
 }

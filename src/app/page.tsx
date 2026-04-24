@@ -18,8 +18,8 @@ import {
 
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { TerminalGrid } from '@/components/TerminalGrid'
-import { FadeIn } from '@/components/remodex/FadeIn'
-import { CopyButton } from '@/components/remodex/CopyButton'
+import { FadeIn } from '@/components/openagent/FadeIn'
+import { CopyButton } from '@/components/openagent/CopyButton'
 import { getOpenAgentStars, OPENAGENT_REPO_URL } from '@/lib/github'
 
 const displayFont = Cormorant_Garamond({

@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 import { join } from 'path'
 import type { Metadata } from 'next'
 
-import { LegalPage } from '@/components/remodex/LegalPage'
+import { LegalPage } from '@/components/openagent/LegalPage'
 import { OPENAGENT_OG_IMAGE } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   const content = readFileSync(
-    join(process.cwd(), 'src/content/remodex/privacy-policy.md'),
+    join(process.cwd(), 'src/content/openagent/privacy-policy.md'),
     'utf-8'
   )
 
