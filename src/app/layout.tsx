@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { REMODEX_OG_IMAGE, SITE_URL } from "@/lib/site";
+import { OPENAGENT_OG_IMAGE, SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-/* FILE: layout.tsx
-   Purpose: Define the app shell, metadata, and the earliest possible theme bootstrap for the site.
-   Layer: App root layout
-   Depends on: ThemeProvider and the Tailwind dark class consumed across the app */
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -33,13 +28,13 @@ const themeBootstrapScript = `
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Remodex — Remote Control for Codex",
-    template: "%s | Remodex",
+    default: "OpenAgent — Obsidian Canvas Workspace for Codex",
+    template: "%s | OpenAgent",
   },
-  description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption. Local-first, self-host friendly.",
-  keywords: ["remodex", "codex", "ios", "iphone", "coding", "github", "terminal", "openai", "codex cli", "mobile development", "ai coding", "remote control"],
-  authors: [{ name: "Emanuele Di Pietro" }],
-  creator: "Remodex",
+  description: "OpenAgent turns Obsidian Canvas into a local workspace for Codex. Select nodes, create a task, stream progress locally, and write the result back into the graph.",
+  keywords: ["openagent", "codex", "obsidian", "canvas", "local-first", "ai coding", "open source", "developer tools", "convos", "agent workspace"],
+  authors: [{ name: "OpenAgent" }],
+  creator: "OpenAgent",
   icons: {
     icon: '/icon.png',
     apple: '/icon.png',
@@ -48,19 +43,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Remodex — Remote Control for Codex",
-    description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption.",
+    title: "OpenAgent — Obsidian Canvas Workspace for Codex",
+    description: "OpenAgent turns Obsidian Canvas into a local workspace for Codex, with local execution, graph-native context, and mobile control through Convos.",
     url: SITE_URL,
-    siteName: "Remodex",
-    images: [REMODEX_OG_IMAGE],
+    siteName: "OpenAgent",
+    images: [OPENAGENT_OG_IMAGE],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Remodex — Remote Control for Codex",
-    description: "Control Codex from your iPhone. Open-source bridge + iOS app with end-to-end encryption.",
-    images: [REMODEX_OG_IMAGE.url],
+    title: "OpenAgent — Obsidian Canvas Workspace for Codex",
+    description: "OpenAgent turns Obsidian Canvas into a local workspace for Codex, with local execution, graph-native context, and mobile control through Convos.",
+    images: [OPENAGENT_OG_IMAGE.url],
   },
   robots: {
     index: true,

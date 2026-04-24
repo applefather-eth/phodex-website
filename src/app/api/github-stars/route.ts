@@ -1,21 +1,21 @@
 // FILE: route.ts
-// Purpose: Expose the Remodex star count to the frontend without calling GitHub from the browser.
+// Purpose: Expose the OpenAgent star count to the frontend without calling GitHub from the browser.
 // Layer: API route
 // Exports: GET
-// Depends on: NextResponse, getRemodexStars
+// Depends on: NextResponse, getOpenAgentStars
 
 import { NextResponse } from 'next/server'
 
-import { REMODEX_REPO_URL, getRemodexStars } from '@/lib/github'
+import { OPENAGENT_REPO_URL, getOpenAgentStars } from '@/lib/github'
 
 // ─── ENTRY POINT ─────────────────────────────────────────────
 
 // Returns the latest cached star count for the public GitHub CTA.
 export async function GET() {
-  const stars = await getRemodexStars()
+  const stars = await getOpenAgentStars()
 
   return NextResponse.json({
-    repoUrl: REMODEX_REPO_URL,
+    repoUrl: OPENAGENT_REPO_URL,
     stars,
   })
 }

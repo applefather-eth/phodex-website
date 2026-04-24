@@ -1,22 +1,20 @@
 // FILE: github.ts
 // Purpose: Fetch public GitHub repository metadata used across the landing page.
 // Layer: Server utility
-// Exports: REMODEX_REPO_URL, getRemodexStars
+// Exports: OPENAGENT_REPO_URL, getOpenAgentStars
 // Depends on: GitHub REST API, optional GITHUB_TOKEN environment variable
 
-const GITHUB_OWNER = 'Emanuele-web04'
-const GITHUB_REPO = 'remodex'
+const GITHUB_OWNER = 'openagentmarket'
+const GITHUB_REPO = 'openagent'
 const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`
 
-export const REMODEX_REPO_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}`
+export const OPENAGENT_REPO_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}`
 
 type GitHubRepositoryResponse = {
   stargazers_count?: number
 }
 
-// Fetches the current star count for the public Remodex repo.
-// Returns null when GitHub is unavailable so the UI can degrade gracefully.
-export async function getRemodexStars(): Promise<number | null> {
+export async function getOpenAgentStars(): Promise<number | null> {
   const headers: HeadersInit = {
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',

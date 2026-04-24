@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export function middleware(request: NextRequest) {
-  const host = request.headers.get('host') ?? ''
-
-  // phodex.app is the primary domain — no rewrite needed
-  // Keep middleware in case future domain routing is added
-
+export function middleware(_request: NextRequest) {
   return NextResponse.next()
 }
 
